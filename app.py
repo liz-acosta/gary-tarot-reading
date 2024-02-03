@@ -40,3 +40,7 @@ def index():
 def tarot_reading():
     tarot_card = random.choice(GARY_TAROT)
     return render_template('tarotreading.html', tarot_card=tarot_card)
+
+if __name__ == "__main__":
+    # Please do not set debug=True in production
+    app.run(host="0.0.0.0", port=5000, debug=True)
